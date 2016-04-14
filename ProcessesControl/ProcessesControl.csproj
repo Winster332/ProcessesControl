@@ -54,6 +54,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UI\BottomPanel.xaml.cs">
+      <DependentUpon>BottomPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItemProcess.xaml.cs">
+      <DependentUpon>ItemProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ListBoxMenu.xaml.cs">
+      <DependentUpon>ListBoxMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PageMenu\PageAutorun.xaml.cs">
+      <DependentUpon>PageAutorun.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PageMenu\PageLogs.xaml.cs">
+      <DependentUpon>PageLogs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PageMenu\PageProcesses.xaml.cs">
+      <DependentUpon>PageProcesses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PageMenu\PageRegulations.xaml.cs">
+      <DependentUpon>PageRegulations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PageMenu\PageSettings.xaml.cs">
+      <DependentUpon>PageSettings.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,6 +90,38 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UI\BottomPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ItemProcess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ListBoxMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PageMenu\PageAutorun.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PageMenu\PageLogs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PageMenu\PageProcesses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PageMenu\PageRegulations.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\PageMenu\PageSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -93,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
