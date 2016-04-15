@@ -51,39 +51,39 @@
 			<StackPanel Name="stackPanel" Orientation="Vertical" Background="#BBBBBB">
 				<Grid Background="{StaticResource color_1_item}">
 					<Label Content="Автозапуск приложения" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ui:MetroCheckBox Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ui:MetroCheckBox x:Name="cb_autorun" Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_2_item}">
 					<Label Content="Обновлять процессы" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ui:MetroCheckBox Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ui:MetroCheckBox x:Name="cb_update_processe" Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_1_item}">
 					<Label Content="Интервал обновления (сек)" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ComboBox Width="100" Height="20" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ComboBox x:Name="comboBox_interval" Width="100" Height="20" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_2_item}">
 					<Label Content="Оповещать об обновлении" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ui:MetroCheckBox Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ui:MetroCheckBox x:Name="cb_nf_msg_update" Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_1_item}">
 					<Label Content="Автообновления" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ui:MetroCheckBox Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ui:MetroCheckBox x:Name="cb_auto_update" Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_2_item}">
 					<Label Content="Оповещать о неопознаном процессе" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ui:MetroCheckBox Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ui:MetroCheckBox x:Name="cb_nf_new_process" Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_1_item}">
 					<Label Content="Защита от яндекс бара, амиго и т.д." FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ui:MetroCheckBox Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ui:MetroCheckBox x:Name="cb_sec_yandex" Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_2_item}">
 					<Label Content="Вести логи о работе приложения" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ui:MetroCheckBox Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ui:MetroCheckBox x:Name="cb_write_logs_app" Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_1_item}">
 					<Label Content="Вести логи о процессах" FontSize="16" FontFamily="Calibri" HorizontalAlignment="Left" Margin="10, 0, 0, 0" Foreground="#555555"/>
-					<ui:MetroCheckBox Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
+					<ui:MetroCheckBox x:Name="cb_write_logs_processes" Width="50" Height="30" HorizontalAlignment="Right" Margin="0, 0, 10, 0"/>
 				</Grid>
 				<Grid Background="{StaticResource color_2_item}">
 					<Button Width="200" Height="30" Content="Проверить наличие обновлений" Margin="0, 4, 0, 0" Style="{StaticResource MetroButtonStyle}"/>

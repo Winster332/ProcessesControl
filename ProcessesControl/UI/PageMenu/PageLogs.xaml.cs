@@ -21,13 +21,40 @@ namespace ProcessesControl.UI.PageMenu
 	/// </summary>
 	public partial class PageLogs : UserControl, IPageBase
 	{
+		private Core.ICore core;
 		public PageLogs()
 		{
 			InitializeComponent();
+
+			this.IsVisibleChanged += PageLogs_IsVisibleChanged;
+		}
+
+		private void PageLogs_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+		{
+			if (this.Visibility == Visibility.Visible)
+			{
+				this.stackPanel.Children.Clear();
+
+				List<System.Diagnostics.Process> list_new_processes = core.GetProcesses().GetNewProcesses();
+
+				for (int i = 0; i < list_new_processes.Count; i++)
+					Add(list_new_processes[i]);
+
+			}
+		}
+		
+		public void Add(System.Diagnostics.Process process)
+		{
+			ItemProcess ip = new ItemProcess();
+			ip.Width = 360;
+			ip.SetNameProcess(process.ProcessName);
+			ip.Height = 30;
+			stackPanel.Children.Add(ip);
 		}
 
 		public void Initialize(ICore core)
 		{
+			this.core = core;
 		}
 	}
 }

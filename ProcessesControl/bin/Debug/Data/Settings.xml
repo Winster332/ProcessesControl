@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<PCSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <autorun>true</autorun>
+  <update_processes>true</update_processes>
+  <interval>5</interval>
+  <nf_update>false</nf_update>
+  <auto_update>true</auto_update>
+  <nf_unknow_processes>true</nf_unknow_processes>
+  <sec_ynadex>false</sec_ynadex>
+  <writing_logs_app>true</writing_logs_app>
+  <writing_logs_processes>true</writing_logs_processes>
+  <current_version>v_1</current_version>
+</PCSettings>

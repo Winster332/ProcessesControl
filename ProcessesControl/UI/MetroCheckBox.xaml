@@ -9,6 +9,6 @@
 	<Grid>
 		<Rectangle Fill="#CCCCCC" Margin="0, 3"/>
 		<Rectangle Stroke="#888888" StrokeThickness="3" Margin="0, 3"/>
-		<Rectangle x:Name="slider" Fill="#4488FF" Width="10" Margin="-25, 0, 0, 0"/>
+		<Rectangle x:Name="slider" Fill="#4488FF" Width="10" Height="29" Margin="-25, 0, 0, 0"/>
 	</Grid>
 </UserControl>

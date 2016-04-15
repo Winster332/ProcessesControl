@@ -48,5 +48,21 @@ namespace ProcessesControl.UI
 		{
 			return IsCheck;
 		}
+
+		public void SetCheck(Boolean value)
+		{
+			IsCheck = value;
+
+			if (IsCheck)
+			{
+				slider.Margin = new Thickness(25, 0, 0, 0);
+				slider.Fill = new SolidColorBrush(Color.FromArgb(255, 80, 220, 140));
+			}
+			else
+			{
+				slider.Margin = new Thickness(-25, 0, 0, 0);
+				slider.Fill = new SolidColorBrush(Color.FromArgb(255, 220, 120, 120));
+			}
+		}
 	}
 }

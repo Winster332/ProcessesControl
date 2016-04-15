@@ -17,6 +17,9 @@ namespace ProcessesControl.Core.BaseCore
 			resourse = new BaseCore.ManagerResource(this);
 			files = new BaseCore.ManagerFiles(this);
 			processes = new BaseCore.ManagerProcesses(this);
+
+			files.CheckAll();
+			resourse.LoadingsSettings();
 		}
 
 		public IFiles GetFiles()

@@ -61,6 +61,6 @@ namespace ProcessesControl.Core
 		/// Возвращает слепок новых процессов
 		/// </summary>
 		/// <returns></returns>
-		BaseCore.CastProcesses GetNewProcesses();
+		List<System.Diagnostics.Process> GetNewProcesses();
 	}
 }
