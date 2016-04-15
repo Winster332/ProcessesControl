@@ -43,6 +43,10 @@
 		</Grid.ColumnDefinitions>
 
 		<TextBlock Grid.Row="0" Grid.Column="0" Text="Автозапуск" Foreground="#707070" FontSize="25" VerticalAlignment="Center" Margin="10, 0, 0, 0"/>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Width="80" Style="{StaticResource MetroButtonStyle}" Content="Очистить" Margin="0, 0, 10, 0" Height="30"/>
+			<Button Width="80" Style="{StaticResource MetroButtonStyle}" Content="Добавить" Margin="0, 0, 10, 0" Height="30"/>
+		</StackPanel>
 		<ScrollViewer Template="{StaticResource AppleStyleScrollBarStyle}" Grid.Column="0" Grid.Row="1" Margin="0, 0, -10, 0">
 			<StackPanel Name="stackPanel" Orientation="Vertical" Background="#BBBBBB">
 			</StackPanel>

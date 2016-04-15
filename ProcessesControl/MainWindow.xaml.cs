@@ -21,7 +21,7 @@ namespace ProcessesControl
 	public partial class MainWindow : Window
 	{
 		#region variables
-
+		public Core.ICore core;
 		#endregion
 		#region MainWindow
 		public MainWindow()
@@ -34,6 +34,14 @@ namespace ProcessesControl
 			this.CommandBindings.Add(new CommandBinding(SystemCommands.MinimizeWindowCommand, this.OnMinimizeWindow, this.OnCanMinimizeWindow));
 			this.CommandBindings.Add(new CommandBinding(SystemCommands.RestoreWindowCommand, this.OnRestoreWindow, this.OnCanResizeWindow));
 			#endregion
+
+			core = new Core.BaseCore.ManagerCore();
+
+			page_autorun.Initialize(core);
+			page_logs.Initialize(core);
+			page_processes.Initialize(core);
+			page_regulations.Initialize(core);
+			page_settings.Initialize(core);
 
 			menu.clickItemsMenu += Menu_clickItemsMenu;
 		}
@@ -50,39 +58,39 @@ namespace ProcessesControl
 			switch (page)
 			{
 				case UI.ListBoxMenu.MenuCommand.processes:
-					processes.Visibility = Visibility.Visible;
-					regulations.Visibility = Visibility.Hidden;
-					logs.Visibility = Visibility.Hidden;
-					autorun.Visibility = Visibility.Hidden;
-					settings.Visibility = Visibility.Hidden;
+					page_processes.Visibility = Visibility.Visible;
+					page_regulations.Visibility = Visibility.Hidden;
+					page_logs.Visibility = Visibility.Hidden;
+					page_autorun.Visibility = Visibility.Hidden;
+					page_settings.Visibility = Visibility.Hidden;
 					break;
 				case UI.ListBoxMenu.MenuCommand.regulation:
-					processes.Visibility = Visibility.Hidden;
-					regulations.Visibility = Visibility.Visible;
-					logs.Visibility = Visibility.Hidden;
-					autorun.Visibility = Visibility.Hidden;
-					settings.Visibility = Visibility.Hidden;
+					page_processes.Visibility = Visibility.Hidden;
+					page_regulations.Visibility = Visibility.Visible;
+					page_logs.Visibility = Visibility.Hidden;
+					page_autorun.Visibility = Visibility.Hidden;
+					page_settings.Visibility = Visibility.Hidden;
 					break;
 				case UI.ListBoxMenu.MenuCommand.logs:
-					processes.Visibility = Visibility.Hidden;
-					regulations.Visibility = Visibility.Hidden;
-					logs.Visibility = Visibility.Visible;
-					autorun.Visibility = Visibility.Hidden;
-					settings.Visibility = Visibility.Hidden;
+					page_processes.Visibility = Visibility.Hidden;
+					page_regulations.Visibility = Visibility.Hidden;
+					page_logs.Visibility = Visibility.Visible;
+					page_autorun.Visibility = Visibility.Hidden;
+					page_settings.Visibility = Visibility.Hidden;
 					break;
 				case UI.ListBoxMenu.MenuCommand.autorun:
-					processes.Visibility = Visibility.Hidden;
-					regulations.Visibility = Visibility.Hidden;
-					logs.Visibility = Visibility.Hidden;
-					settings.Visibility = Visibility.Hidden;
-					autorun.Visibility = Visibility.Visible;
+					page_processes.Visibility = Visibility.Hidden;
+					page_regulations.Visibility = Visibility.Hidden;
+					page_logs.Visibility = Visibility.Hidden;
+					page_settings.Visibility = Visibility.Hidden;
+					page_autorun.Visibility = Visibility.Visible;
 					break;
 				case UI.ListBoxMenu.MenuCommand.settings:
-					processes.Visibility = Visibility.Hidden;
-					regulations.Visibility = Visibility.Hidden;
-					logs.Visibility = Visibility.Hidden;
-					autorun.Visibility = Visibility.Hidden;
-					settings.Visibility = Visibility.Visible;
+					page_processes.Visibility = Visibility.Hidden;
+					page_regulations.Visibility = Visibility.Hidden;
+					page_logs.Visibility = Visibility.Hidden;
+					page_autorun.Visibility = Visibility.Hidden;
+					page_settings.Visibility = Visibility.Visible;
 					break;
 				case UI.ListBoxMenu.MenuCommand.exit: SystemCommands.CloseWindow(this); break;
 			}

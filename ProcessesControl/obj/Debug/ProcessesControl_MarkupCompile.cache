@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\
 ProcessesControl
 none
 false
 DEBUG;TRACE
-c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\App.xaml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\App.xaml
 9-1634566152
 
-13478316875
+24-1298910247
 13-959377339
 MainWindow.xaml;UI\BottomPanel.xaml;UI\ItemProcess.xaml;UI\ListBoxMenu.xaml;UI\PageMenu\PageAutorun.xaml;UI\PageMenu\PageLogs.xaml;UI\PageMenu\PageProcesses.xaml;UI\PageMenu\PageRegulations.xaml;UI\PageMenu\PageSettings.xaml;
 

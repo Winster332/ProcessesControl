@@ -24,5 +24,10 @@ namespace ProcessesControl.UI
 		{
 			InitializeComponent();
 		}
+
+		public void SetNameProcess(String name)
+		{
+			label_name_process.Content = name;
+		}
 	}
 }

@@ -12,17 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProcessesControl.Core;
 
 namespace ProcessesControl.UI.PageMenu
 {
 	/// <summary>
 	/// Interaction logic for PageRegulations.xaml
 	/// </summary>
-	public partial class PageRegulations : UserControl
+	public partial class PageRegulations : UserControl, IPageBase
 	{
 		public PageRegulations()
 		{
 			InitializeComponent();
+		}
+
+		public void Initialize(ICore core)
+		{
 		}
 	}
 }

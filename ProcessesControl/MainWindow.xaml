@@ -19,10 +19,10 @@
 		</Grid.RowDefinitions>
 		<ui:ListBoxMenu x:Name="menu" Grid.Column="0" Grid.Row="0"/>
 		<ui:BottomPanel x:Name="bottom_panel" Grid.ColumnSpan="2" Grid.Row="1"/>
-		<pageMenu:PageProcesses x:Name="processes" Grid.Column="1" Grid.Row="0" Visibility="Visible"/>
-		<pageMenu:PageSettings x:Name="settings" Grid.Column="1" Grid.Row="0" Visibility="Hidden"/>
-		<pageMenu:PageLogs x:Name="logs" Grid.Column="1" Grid.Row="0" Visibility="Hidden"/>
-		<pageMenu:PageRegulations x:Name="regulations" Grid.Column="1" Grid.Row="0" Visibility="Hidden" />
-		<pageMenu:PageAutorun x:Name="autorun" Grid.Column="1" Grid.Row="0" Visibility="Hidden" />
+		<pageMenu:PageProcesses x:Name="page_processes" Grid.Column="1" Grid.Row="0" Visibility="Visible"/>
+		<pageMenu:PageSettings x:Name="page_settings" Grid.Column="1" Grid.Row="0" Visibility="Hidden"/>
+		<pageMenu:PageLogs x:Name="page_logs" Grid.Column="1" Grid.Row="0" Visibility="Hidden"/>
+		<pageMenu:PageRegulations x:Name="page_regulations" Grid.Column="1" Grid.Row="0" Visibility="Hidden" />
+		<pageMenu:PageAutorun x:Name="page_autorun" Grid.Column="1" Grid.Row="0" Visibility="Hidden" />
 	</Grid>
 </Window>

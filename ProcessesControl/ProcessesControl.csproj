@@ -54,6 +54,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\BaseCore\CastProcesses.cs" />
+    <Compile Include="Core\BaseCore\ManagerCore.cs" />
+    <Compile Include="Core\BaseCore\ManagerFiles.cs" />
+    <Compile Include="Core\BaseCore\ManagerProcesses.cs" />
+    <Compile Include="Core\BaseCore\ManagerResource.cs" />
+    <Compile Include="Core\BaseCore\PCProcess.cs" />
+    <Compile Include="Core\IFiles.cs" />
+    <Compile Include="Core\ICore.cs" />
+    <Compile Include="Core\IProcesses.cs" />
+    <Compile Include="Core\IResourse.cs" />
     <Compile Include="UI\BottomPanel.xaml.cs">
       <DependentUpon>BottomPanel.xaml</DependentUpon>
     </Compile>
@@ -63,6 +73,7 @@
     <Compile Include="UI\ListBoxMenu.xaml.cs">
       <DependentUpon>ListBoxMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\PageMenu\IPageBase.cs" />
     <Compile Include="UI\PageMenu\PageAutorun.xaml.cs">
       <DependentUpon>PageAutorun.xaml</DependentUpon>
     </Compile>
@@ -150,9 +161,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Core\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
