@@ -1,0 +1,26 @@
+﻿<Window x:Class="ProcessesControl.UI.MetroWindowClose"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProcessesControl.UI"
+        mc:Ignorable="d"
+        Title="Выйти из приложения" Height="210" Width="350" Style="{StaticResource MyWindowStyle}">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="30"/>
+		</Grid.RowDefinitions>
+		<Rectangle Fill="#CCCCCC" Grid.Row="1"/>
+		<StackPanel Grid.Row="0" Orientation="Vertical">
+			<Label Content="После выхода, приложение будет полностью"/>
+			<Label Content="завершено. Если вы хотите чтоб приложение"/>
+			<Label Content="продолжило защищать вашу OS, нажмите - Защищать"/>
+		</StackPanel>
+		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 3">
+			<Button Width="100" Content="Выйти" Style="{StaticResource MetroButtonStyle}" Tag="CLOSE" Click="Button_Click"/>
+			<Button Width="100" Content="Защищать" Style="{StaticResource MetroButtonStyle}" Margin="10, 0" Tag="SEC" Click="Button_Click"/>
+			<Button Width="100" Content="Отмена" Style="{StaticResource MetroButtonStyle}" Tag="CANCLE" Click="Button_Click"/>
+		</StackPanel>
+	</Grid>
+</Window>

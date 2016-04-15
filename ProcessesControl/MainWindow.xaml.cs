@@ -92,8 +92,25 @@ namespace ProcessesControl
 					page_autorun.Visibility = Visibility.Hidden;
 					page_settings.Visibility = Visibility.Visible;
 					break;
-				case UI.ListBoxMenu.MenuCommand.exit: SystemCommands.CloseWindow(this); break;
+				case UI.ListBoxMenu.MenuCommand.exit:
+					UI.MetroWindowClose mwc = new UI.MetroWindowClose(this);
+					Canvas.SetLeft(mwc, this.Width / 2);
+					Canvas.SetTop(mwc, this.Height / 2);
+					mwc.ShowDialog();
+					UI.MetroWindowClose.ResultCloseWindow result = mwc.GetResult();
+					switch (result)
+					{
+						case UI.MetroWindowClose.ResultCloseWindow.cancle:  break;
+						case UI.MetroWindowClose.ResultCloseWindow.close: SystemCommands.CloseWindow(this); break;
+						case UI.MetroWindowClose.ResultCloseWindow.hidden: ToHide(); break;
+					}
+					break;
 			}
+		}
+		#endregion
+		#region ToHide
+		private void ToHide()
+		{
 		}
 		#endregion
 		#region Commands

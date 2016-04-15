@@ -30,3 +30,11 @@ c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesCo
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\PageMenu\PageAutorun.baml
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\ItemProcess.g.cs
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\ItemProcess.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroCheckBox.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroTextBox.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroWindowRegeditAddKeyValue.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroCheckBox.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroTextBox.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroWindowRegeditAddKeyValue.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroWindowClose.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroWindowClose.baml

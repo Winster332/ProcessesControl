@@ -8,5 +8,8 @@ namespace ProcessesControl.Core
 {
 	public interface IFiles
 	{
+		void CheckAllFolder();
+		void CheckAllFiles();
+		void CheckAll();
 	}
 }

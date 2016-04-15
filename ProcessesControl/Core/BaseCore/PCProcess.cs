@@ -8,6 +8,9 @@ namespace ProcessesControl.Core.BaseCore
 {
 	public class PCProcess
 	{
-
+		public String name;
+		public String path;
+		public bool IsNew;
+		public bool IsDead;
 	}
 }

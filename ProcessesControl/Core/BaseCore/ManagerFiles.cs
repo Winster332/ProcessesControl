@@ -14,5 +14,20 @@ namespace ProcessesControl.Core.BaseCore
 		{
 			this.core = core;
 		}
+
+		public void CheckAll()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void CheckAllFiles()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void CheckAllFolder()
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

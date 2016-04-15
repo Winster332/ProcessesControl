@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\App.xaml
-9-1634566152
+13-651411213
 
-24-1298910247
+29-1932298788
 13-959377339
-MainWindow.xaml;UI\BottomPanel.xaml;UI\ItemProcess.xaml;UI\ListBoxMenu.xaml;UI\PageMenu\PageAutorun.xaml;UI\PageMenu\PageLogs.xaml;UI\PageMenu\PageProcesses.xaml;UI\PageMenu\PageRegulations.xaml;UI\PageMenu\PageSettings.xaml;
+MainWindow.xaml;UI\BottomPanel.xaml;UI\ItemProcess.xaml;UI\ListBoxMenu.xaml;UI\MetroCheckBox.xaml;UI\MetroTextBox.xaml;UI\MetroWindowClose.xaml;UI\MetroWindowRegeditAddKeyValue.xaml;UI\PageMenu\PageAutorun.xaml;UI\PageMenu\PageLogs.xaml;UI\PageMenu\PageProcesses.xaml;UI\PageMenu\PageRegulations.xaml;UI\PageMenu\PageSettings.xaml;
 
 False
 

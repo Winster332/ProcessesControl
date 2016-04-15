@@ -8,5 +8,8 @@ namespace ProcessesControl.Core
 {
 	public interface IResourse
 	{
+		PCSettings GetSettings();
+		void SetSettings(PCSettings settings);
+		void LoadingsSettings();
 	}
 }

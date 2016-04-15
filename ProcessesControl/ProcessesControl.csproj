@@ -64,6 +64,7 @@
     <Compile Include="Core\ICore.cs" />
     <Compile Include="Core\IProcesses.cs" />
     <Compile Include="Core\IResourse.cs" />
+    <Compile Include="Core\PCSettings.cs" />
     <Compile Include="UI\BottomPanel.xaml.cs">
       <DependentUpon>BottomPanel.xaml</DependentUpon>
     </Compile>
@@ -72,6 +73,18 @@
     </Compile>
     <Compile Include="UI\ListBoxMenu.xaml.cs">
       <DependentUpon>ListBoxMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MetroCheckBox.xaml.cs">
+      <DependentUpon>MetroCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MetroTextBox.xaml.cs">
+      <DependentUpon>MetroTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MetroWindowClose.xaml.cs">
+      <DependentUpon>MetroWindowClose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MetroWindowRegeditAddKeyValue.xaml.cs">
+      <DependentUpon>MetroWindowRegeditAddKeyValue.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\PageMenu\IPageBase.cs" />
     <Compile Include="UI\PageMenu\PageAutorun.xaml.cs">
@@ -110,6 +123,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\ListBoxMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MetroCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MetroTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MetroWindowClose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MetroWindowRegeditAddKeyValue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProcessesControl.UI"
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="400">
+             d:DesignHeight="100" d:DesignWidth="357" >
 	<UserControl.Resources>
 		<Style x:Key="StyleButtonClose" TargetType="Button">
 			<Setter Property="Background" Value="#505050"/>
@@ -31,11 +31,19 @@
 		</Style>
 	</UserControl.Resources>
 	<Grid Background="#AAAAAA">
-		<Button Background="#999999" Padding="0">
-			<Grid Width="360">
-				<Label x:Name="label_name_process" Content="System" FontSize="17" Margin="0, -2, 0, 0" Foreground="#303030"/>
-				<Button Width="30" Height="30" Margin="0, 0, 3, 0" HorizontalAlignment="Right" Style="{StaticResource StyleButtonClose}"/>
-			</Grid>
-		</Button>
+		<StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<Button Background="#999999" Padding="0" VerticalAlignment="Top" Click="Button_Click">
+					<Grid Width="325">
+						<Label x:Name="label_name_process" Content="System" FontSize="17" Margin="0, -2, 0, 0" Foreground="#303030"/>
+					</Grid>
+				</Button>
+				<Button Width="30" HorizontalAlignment="Right" Style="{StaticResource StyleButtonClose}"/>
+			</StackPanel>
+			<StackPanel>
+				<Label Content="Имя: "/>
+				<Label Content="Путь: "/>
+			</StackPanel>
+		</StackPanel>
 	</Grid>
 </UserControl>

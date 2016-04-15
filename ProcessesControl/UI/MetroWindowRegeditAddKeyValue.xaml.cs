@@ -10,33 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ProcessesControl.Core;
 
-namespace ProcessesControl.UI.PageMenu
+namespace ProcessesControl.UI
 {
 	/// <summary>
-	/// Interaction logic for PageSettings.xaml
+	/// Interaction logic for MetroWindowRegeditAddKeyValue.xaml
 	/// </summary>
-	public partial class PageSettings : UserControl, IPageBase
+	public partial class MetroWindowRegeditAddKeyValue : Window
 	{
-		private Core.ICore core;
-
-		public PageSettings()
+		public MetroWindowRegeditAddKeyValue()
 		{
 			InitializeComponent();
-		}
-
-		public void Initialize(ICore core)
-		{
-			this.core = core;
-		}
-
-		// Default settings
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-
 		}
 	}
 }

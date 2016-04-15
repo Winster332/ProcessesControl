@@ -20,6 +20,7 @@ namespace ProcessesControl.UI
 	/// </summary>
 	public partial class ItemProcess : UserControl
 	{
+		private Boolean show = false;
 		public ItemProcess()
 		{
 			InitializeComponent();
@@ -28,6 +29,21 @@ namespace ProcessesControl.UI
 		public void SetNameProcess(String name)
 		{
 			label_name_process.Content = name;
+		}
+
+		// Show
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			if (!show)
+			{
+				this.Height = 100;
+			}
+			else
+			{
+				this.Height = 30;
+			}
+
+			show = !show;
 		}
 	}
 }

@@ -12,31 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ProcessesControl.Core;
 
-namespace ProcessesControl.UI.PageMenu
+namespace ProcessesControl.UI
 {
 	/// <summary>
-	/// Interaction logic for PageSettings.xaml
+	/// Interaction logic for MetroTextBox.xaml
 	/// </summary>
-	public partial class PageSettings : UserControl, IPageBase
+	public partial class MetroTextBox : UserControl
 	{
-		private Core.ICore core;
-
-		public PageSettings()
+		public MetroTextBox()
 		{
 			InitializeComponent();
-		}
-
-		public void Initialize(ICore core)
-		{
-			this.core = core;
-		}
-
-		// Default settings
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-
 		}
 	}
 }
