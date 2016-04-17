@@ -44,14 +44,15 @@ namespace ProcessesControl.UI.PageMenu
 		{
 			this.core = core;
 		}
-		
-		public void Add(String name)
+
+		public void Add(String name, Object obj)
 		{
-			ItemProcess ip = new ItemProcess();
-			ip.Width = 360;
-			ip.SetNameProcess(name);
-			ip.Height = 30;
-			stackPanel.Children.Add(ip);
+			ItemAutorun item = new ItemAutorun();
+			item.Width = 360;
+			item.Height = 30;
+			item.SetName(name);
+			item.SetValue(obj.ToString());
+			stackPanel.Children.Add(item);
 		}
 
 		public void CheckAutorun()
@@ -65,7 +66,19 @@ namespace ProcessesControl.UI.PageMenu
 			String[] names = reg.GetValueNames();
 
 			for (int i = 0; i < names.Length; i++)
-				Add(names[i]);
+				Add(names[i], reg.GetValue(names[i]));
+		}
+
+		// Click top buttons
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			String tag = ((Button)sender).Tag.ToString();
+
+			switch (tag)
+			{
+				case "ADD":		 break;
+				case "CLEAR":	 break;
+			}
 		}
 	}
 }

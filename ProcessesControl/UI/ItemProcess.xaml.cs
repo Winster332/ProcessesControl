@@ -31,12 +31,17 @@ namespace ProcessesControl.UI
 			label_name_process.Content = name;
 		}
 
+		public void SetImage(String path)
+		{
+			BitmapImage bi = new BitmapImage(new Uri(path));
+			img.Source = bi;
+		}
 		// Show
-		private void Button_Click(object sender, RoutedEventArgs e)
+		private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
 		{
 			if (!show)
 			{
-				this.Height = 100;
+				this.Height = 200;
 			}
 			else
 			{

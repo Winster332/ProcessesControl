@@ -24,5 +24,9 @@ namespace ProcessesControl.UI
 		{
 			InitializeComponent();
 		}
+
+		public void SetAllValues(int Processes, int lock_count, int cpu, int ram)
+		{
+		}
 	}
 }

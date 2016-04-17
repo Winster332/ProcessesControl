@@ -38,3 +38,13 @@ C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesCo
 C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroWindowRegeditAddKeyValue.baml
 C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroWindowClose.g.cs
 C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\MetroWindowClose.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\ItemRegulation.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\ItemRegulation.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowCreateRegulation.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowCreateRegulation.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\ItemAutorun.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\ItemAutorun.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowCreateFileAutorun.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowStartProcess.g.cs
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowCreateFileAutorun.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowStartProcess.baml

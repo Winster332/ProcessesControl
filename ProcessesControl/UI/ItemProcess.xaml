@@ -5,44 +5,35 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProcessesControl.UI"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="357" >
-	<UserControl.Resources>
-		<Style x:Key="StyleButtonClose" TargetType="Button">
-			<Setter Property="Background" Value="#505050"/>
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="Button">
-						<Grid Background="{TemplateBinding Background}">
-							<TextBlock Text="r" HorizontalAlignment="Center" VerticalAlignment="Center" 
-									   FontFamily="Marlett" FontSize="18" Foreground="#CCCCCC"/>
-							<ContentControl HorizontalAlignment="Center" VerticalAlignment="Center"/>
-						</Grid>
-						<ControlTemplate.Triggers>
-							<Trigger Property="IsMouseOver" Value="True">
-								<Setter Property="Background" Value="#994444"/>
-							</Trigger>
-							<Trigger Property="IsPressed" Value="True">
-								<Setter Property="Background" Value="#CC5555"/>
-							</Trigger>
-						</ControlTemplate.Triggers>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-	</UserControl.Resources>
+             d:DesignHeight="200" d:DesignWidth="357" >
 	<Grid Background="#AAAAAA">
 		<StackPanel>
-			<StackPanel Orientation="Horizontal">
-				<Button Background="#999999" Padding="0" VerticalAlignment="Top" Click="Button_Click">
-					<Grid Width="325">
-						<Label x:Name="label_name_process" Content="System" FontSize="17" Margin="0, -2, 0, 0" Foreground="#303030"/>
+			<StackPanel Orientation="Horizontal" Background="#9A9A9A" MouseDown="StackPanel_MouseDown">
+				<Grid Width="325">
+						<Image x:Name="img" Width="40" HorizontalAlignment="Left"/>
+						<Label x:Name="label_name_process" Content="System" FontSize="17" Margin="40, -2, 0, 0" Foreground="#303030"/>
 					</Grid>
-				</Button>
-				<Button Width="30" HorizontalAlignment="Right" Style="{StaticResource StyleButtonClose}"/>
+					<Button Width="30" HorizontalAlignment="Right" Style="{StaticResource StyleButtonClose}"/>
 			</StackPanel>
 			<StackPanel>
 				<Label Content="Имя: "/>
 				<Label Content="Путь: "/>
+				<Grid>
+					<Label Content="Статус: "/>
+					<Button HorizontalAlignment="Right" Width="100" Content="Изменить" Style="{StaticResource MetroButtonStyle}" Margin="0, 0, 10, 0"/>
+				</Grid>
+				<Label Content="ID: "/>
+				<Label Content="Время работы: "/>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="120"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<Button Grid.Column="0" Height="30" Width="100" Style="{StaticResource MetroButtonStyle}" Content="Расположение" Margin="10, 0"/>
+					<Button Grid.Column="1" Width="100" Style="{StaticResource MetroButtonStyle}" Content="Завершить" Margin="10, 0"/>
+					<Button Grid.Column="2" Width="100" Style="{StaticResource MetroButtonStyle}" Content="Создать праивло" Margin="10, 0"/>
+				</Grid>
 			</StackPanel>
 		</StackPanel>
 	</Grid>

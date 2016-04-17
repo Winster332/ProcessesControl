@@ -11,5 +11,6 @@ namespace ProcessesControl.Core
 		PCSettings GetSettings();
 		void SetSettings(PCSettings settings);
 		void LoadingsSettings();
+		BaseCore.ManagerCast GetManagerCast();
 	}
 }

@@ -12,6 +12,7 @@ namespace ProcessesControl.Core.BaseCore
 	{
 		private ICore core;
 		public PCSettings settings;
+		private ManagerCast mCast;
 
 		public ManagerResource(ICore core)
 		{
@@ -42,6 +43,11 @@ namespace ProcessesControl.Core.BaseCore
 			{
 				this.settings = (PCSettings)ser.Deserialize(stream);
 			}
+		}
+
+		public ManagerCast GetManagerCast()
+		{
+			return mCast;
 		}
 	}
 }

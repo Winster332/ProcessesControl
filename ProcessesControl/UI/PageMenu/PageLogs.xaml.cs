@@ -56,5 +56,16 @@ namespace ProcessesControl.UI.PageMenu
 		{
 			this.core = core;
 		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			String tag = ((Button)sender).Tag.ToString();
+
+			switch (tag)
+			{
+				case "APPLY": break;
+				case "CLEAR": break;
+			}
+		}
 	}
 }

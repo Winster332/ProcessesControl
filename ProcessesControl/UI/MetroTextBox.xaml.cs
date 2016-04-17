@@ -20,9 +20,35 @@ namespace ProcessesControl.UI
 	/// </summary>
 	public partial class MetroTextBox : UserControl
 	{
+		#region varaibels
+		public String Text
+		{
+			get
+			{
+				return textBox.Text;
+			}
+			set
+			{
+				textBox.Text = value;
+			}
+		}
+		#endregion
 		public MetroTextBox()
 		{
 			InitializeComponent();
 		}
+		#region Button click clear
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			ClearText();
+			textBox.Focus();
+		}
+		#endregion
+		#region Clear text
+		public void ClearText()
+		{
+			textBox.Text = "";
+		}
+		#endregion
 	}
 }

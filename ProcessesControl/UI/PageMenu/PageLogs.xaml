@@ -44,8 +44,8 @@
 
 		<TextBlock Grid.Row="0" Grid.Column="0" Text="Логи процессов" Foreground="#707070" FontSize="25" VerticalAlignment="Center" Margin="10, 0, 0, 0"/>
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-			<Button Width="80" Content="Принять" Style="{StaticResource MetroButtonStyle}" />
-			<Button Width="80" Content="Очистить" Style="{StaticResource MetroButtonStyle}" Margin="10, 0"/>
+			<Button Width="70" Content="Принять" Style="{StaticResource MetroButtonStyle}" Height="30" Tag="APPLY" Click="Button_Click"/>
+			<Button Width="70" Content="Очистить" Style="{StaticResource MetroButtonStyle}" Height="30" Margin="10, 0" Tag="CLEAR" Click="Button_Click"/>
 		</StackPanel>
 		<ScrollViewer Template="{StaticResource AppleStyleScrollBarStyle}" Grid.Column="0" Grid.Row="1" Margin="0, 0, -10, 0">
 			<StackPanel Name="stackPanel" Orientation="Vertical" Background="#BBBBBB">

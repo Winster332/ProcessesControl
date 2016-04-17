@@ -92,6 +92,8 @@ namespace ProcessesControl.UI.PageMenu
 			ip.Width = 360;
 			ip.SetNameProcess(process.ProcessName);
 			ip.Height = 30;
+		// Нужно доставать иконку из процесса
+		//	ip.SetImage(@"C:\Users\User\Desktop\Screen\post-1120952-1428568681.png"); 
 			stackPanel.Children.Add(ip);
 		}
 		#endregion

@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Core\BaseCore\CastProcesses.cs" />
+    <Compile Include="Core\BaseCore\ManagerCast.cs" />
     <Compile Include="Core\BaseCore\ManagerCore.cs" />
     <Compile Include="Core\BaseCore\ManagerFiles.cs" />
     <Compile Include="Core\BaseCore\ManagerProcesses.cs" />
@@ -65,11 +66,18 @@
     <Compile Include="Core\IProcesses.cs" />
     <Compile Include="Core\IResourse.cs" />
     <Compile Include="Core\PCSettings.cs" />
+    <Compile Include="Net\ManagerNet.cs" />
     <Compile Include="UI\BottomPanel.xaml.cs">
       <DependentUpon>BottomPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\ItemAutorun.xaml.cs">
+      <DependentUpon>ItemAutorun.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\ItemProcess.xaml.cs">
       <DependentUpon>ItemProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItemRegulation.xaml.cs">
+      <DependentUpon>ItemRegulation.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\ListBoxMenu.xaml.cs">
       <DependentUpon>ListBoxMenu.xaml</DependentUpon>
@@ -102,6 +110,15 @@
     <Compile Include="UI\PageMenu\PageSettings.xaml.cs">
       <DependentUpon>PageSettings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\WindowCreateFileAutorun.xaml.cs">
+      <DependentUpon>WindowCreateFileAutorun.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowCreateRegulation.xaml.cs">
+      <DependentUpon>WindowCreateRegulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowStartProcess.xaml.cs">
+      <DependentUpon>WindowStartProcess.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -118,7 +135,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UI\ItemAutorun.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\ItemProcess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ItemRegulation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -159,6 +184,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UI\PageMenu\PageSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\WindowCreateFileAutorun.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\WindowCreateRegulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\WindowStartProcess.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
