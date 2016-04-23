@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProcessesControl.Core.BaseCore
 {
-	public class CastProcesses
+	public enum EventTypeSignature { none, kill, msg, msg_and_kill }
+
+	[Serializable]
+	public class INFO_SIGNATURE
 	{
-		public String data;
 		public String name;
-		public List<PCProcess> processes;
+		public EventTypeSignature TypeSignature;
 	}
 }

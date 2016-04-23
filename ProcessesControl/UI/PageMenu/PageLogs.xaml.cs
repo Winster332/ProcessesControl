@@ -35,7 +35,7 @@ namespace ProcessesControl.UI.PageMenu
 			{
 				this.stackPanel.Children.Clear();
 
-				List<System.Diagnostics.Process> list_new_processes = core.GetProcesses().GetNewProcesses();
+				List<System.Diagnostics.Process> list_new_processes = core.GetProcesses().UpdateNewProcesses();
 
 				for (int i = 0; i < list_new_processes.Count; i++)
 					Add(list_new_processes[i]);

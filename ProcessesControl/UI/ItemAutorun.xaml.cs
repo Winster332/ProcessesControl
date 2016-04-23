@@ -35,15 +35,23 @@ namespace ProcessesControl.UI
 
 		public void SetValue(String value)
 		{
-			this.label_sub_value.Content = "Значение: " + value;
 			this.label_sub_value.ToolTip = value;
+
+			if (value.Length > 45)
+				value = value.Substring(0, 45) + "...";
+			this.label_sub_value.Content = "Значение: " + value;
+		}
+
+		public void SetKeyType(String type)
+		{
+			label_type.Content = "Тип: " + type;
 		}
 
 		private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
 		{
 			if (!local_visible)
 			{
-				this.Height = 100;
+				this.Height = 110;
 			}
 			else
 			{

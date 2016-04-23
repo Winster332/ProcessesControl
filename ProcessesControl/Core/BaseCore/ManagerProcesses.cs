@@ -22,28 +22,9 @@ namespace ProcessesControl.Core.BaseCore
 			prev_processes = new List<Process>();
 			new_processes = new List<Process>();
 		}
-
-		public void AddCastProcess(CastProcesses cast)
-		{
-			throw new NotImplementedException();
-		}
-
-		public void ClearAllCast()
-		{
-		}
-
+		
 		public void ClearFrozenProcesses()
 		{
-		}
-
-		public List<CastProcesses> GetAllCast()
-		{
-			throw new NotImplementedException();
-		}
-
-		public CastProcesses GetCastProcess(string id)
-		{
-			throw new NotImplementedException();
 		}
 
 		public List<PCProcess> GetFrozenProcesses()
@@ -51,7 +32,7 @@ namespace ProcessesControl.Core.BaseCore
 			throw new NotImplementedException();
 		}
 
-		public List<Process> GetNewProcesses()
+		public List<Process> UpdateNewProcesses()
 		{
 			current_processes.Clear();
 			Process[] cp = Process.GetProcesses();
@@ -102,17 +83,15 @@ namespace ProcessesControl.Core.BaseCore
 
 		public void LockProcess(Process process)
 		{
-			throw new NotImplementedException();
-		}
-
-		public void RemoveCast(string id)
-		{
-			throw new NotImplementedException();
 		}
 
 		public void UnlockProcess(Process process)
 		{
-			throw new NotImplementedException();
+		}
+
+		public List<Process> GetNewProcesses()
+		{
+			return new_processes;
 		}
 	}
 }

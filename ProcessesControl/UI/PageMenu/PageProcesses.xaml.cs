@@ -23,9 +23,6 @@ namespace ProcessesControl.UI.PageMenu
 	{
 		#region variables
 		private Core.ICore core;
-		private int sleep_worker = 1000;
-		private System.ComponentModel.BackgroundWorker worker;
-		private Boolean running_worker = true;
 		#endregion
 		#region PageProcesses
 		public PageProcesses()
@@ -33,10 +30,6 @@ namespace ProcessesControl.UI.PageMenu
 			InitializeComponent();
 
 			this.IsVisibleChanged += PageProcesses_IsVisibleChanged;
-
-			worker = new System.ComponentModel.BackgroundWorker();
-			worker.DoWork += Worker_DoWork;
-			worker.RunWorkerCompleted += Worker_RunWorkerCompleted;
 		}
 		#endregion
 		#region Visible changed
@@ -49,40 +42,16 @@ namespace ProcessesControl.UI.PageMenu
 
 				for (int i = 0; i < procrsses.Length; i++)
 					Add(procrsses[i]);
-
-				sleep_worker = core.GetResource().GetSettings().interval * 1000;
-
-				if (core.GetResource().GetSettings().update_processes)
-				{
-					running_worker = true;
-				}
-				else running_worker = false;
 			}
 			else if (Visibility == Visibility.Hidden)
 			{
 			}
 		}
 		#endregion
-		#region Background worker async
-		private void Worker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
-		{
-			this.Update();
-
-			if (running_worker)
-				worker.RunWorkerAsync();
-		}
-
-		private void Worker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-		{
-			System.Threading.Thread.Sleep(sleep_worker);
-		}
-		#endregion
 		#region Initialize
 		public void Initialize(ICore core)
 		{
 			this.core = core;
-
-			worker.RunWorkerAsync();
 		}
 		#endregion
 		#region Add
@@ -92,16 +61,17 @@ namespace ProcessesControl.UI.PageMenu
 			ip.Width = 360;
 			ip.SetNameProcess(process.ProcessName);
 			ip.Height = 30;
+			ip.SetMemory(((process.VirtualMemorySize / 1024) / 1000).ToString());
 		// Нужно доставать иконку из процесса
 		//	ip.SetImage(@"C:\Users\User\Desktop\Screen\post-1120952-1428568681.png"); 
 			stackPanel.Children.Add(ip);
 		}
 		#endregion
 		#region Update
-		private void Update()
+		public void Update()
 		{
 			System.Diagnostics.Process[] procrsses = core.GetProcesses().GetProcesses();
-			core.GetProcesses().GetNewProcesses();
+			core.GetProcesses().UpdateNewProcesses();
 
 			stackPanel.Children.Clear();
 

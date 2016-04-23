@@ -20,6 +20,8 @@ namespace ProcessesControl.Core.BaseCore
 
 			files.CheckAll();
 			resourse.LoadingsSettings();
+			resourse.GetManagerCast().LoadingListCast();
+			resourse.GetManagerAutorun().LoadingListFiles();
 		}
 
 		public IFiles GetFiles()

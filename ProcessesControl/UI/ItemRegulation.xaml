@@ -10,9 +10,9 @@
     <Grid>
 		<Rectangle Fill="#ADADAD" />
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-			<ComboBox Height="20" Width="130"/>
+			<ComboBox x:Name="cb_type" Height="20" Width="130"/>
 			<Button Width="30" Margin="5, 2" Style="{StaticResource StyleButtonClose}"/>
 		</StackPanel>
-		<ui:MetroTextBox  HorizontalAlignment="Left" Margin="5, 0"/>
+		<ui:MetroTextBox x:Name="tb_name" HorizontalAlignment="Left" Margin="5, 0"/>
 	</Grid>
 </UserControl>

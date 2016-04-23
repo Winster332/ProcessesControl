@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -54,7 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Core\BaseCore\CastProcesses.cs" />
+    <Compile Include="Core\BaseCore\INFO_SIGNATURE.cs" />
+    <Compile Include="Core\BaseCore\ManagerAutorun.cs" />
     <Compile Include="Core\BaseCore\ManagerCast.cs" />
     <Compile Include="Core\BaseCore\ManagerCore.cs" />
     <Compile Include="Core\BaseCore\ManagerFiles.cs" />
@@ -227,7 +229,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

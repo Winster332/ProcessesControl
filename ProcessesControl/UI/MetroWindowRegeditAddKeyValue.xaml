@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProcessesControl.UI"
-        mc:Ignorable="d"
-        Title="MetroWindowRegeditAddKeyValue" Height="300" Width="300">
+		xmlns:ui="clr-namespace:ProcessesControl.UI"
+        mc:Ignorable="d" Style="{StaticResource MyWindowStyle}"
+        Title="Создание файла в реестре" Height="300" Width="300">
     <Grid>
-        
+		<StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+			<Label Content="Название: "/>
+			<ui:MetroTextBox />
+		</StackPanel>
     </Grid>
 </Window>

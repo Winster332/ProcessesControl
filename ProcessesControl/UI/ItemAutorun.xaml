@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProcessesControl.UI"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="357">
+             d:DesignHeight="110" d:DesignWidth="357">
     <Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="30" />
@@ -13,11 +13,14 @@
 		</Grid.RowDefinitions>
 		<Rectangle MouseDown="Rectangle_MouseDown" Grid.Row="0" Fill="#ADADAD" Height="30" VerticalAlignment="Top"></Rectangle>
 		<Label x:Name="label_name" Content="Name" FontFamily="Calibri" FontSize="16" Foreground="#454545" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-		<Button Width="30" Height="30" Style="{StaticResource StyleButtonClose}" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-		
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+			<Button Width="65" Height="28" VerticalAlignment="Center" Content="Перейти" Margin="0, 0, 5, 0" Style="{StaticResource MetroButtonStyle}"/>
+			<Button Width="30" Height="30" Style="{StaticResource StyleButtonClose}"/>
+		</StackPanel>
 		<StackPanel Grid.Row="1" Orientation="Vertical" Background="#DADADA">
 			<Label x:Name="label_sub_name" Content="Имя:" />
 			<Label x:Name="label_sub_value" Content="Значение: " />
+			<Label x:Name="label_type" Content="Тип: " />
 		</StackPanel>
 	</Grid>
 </UserControl>

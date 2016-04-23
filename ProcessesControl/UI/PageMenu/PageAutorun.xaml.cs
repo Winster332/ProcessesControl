@@ -45,13 +45,14 @@ namespace ProcessesControl.UI.PageMenu
 			this.core = core;
 		}
 
-		public void Add(String name, Object obj)
+		public void Add(String name, Object obj, RegistryValueKind regView)
 		{
 			ItemAutorun item = new ItemAutorun();
 			item.Width = 360;
 			item.Height = 30;
 			item.SetName(name);
 			item.SetValue(obj.ToString());
+			item.SetKeyType(regView.ToString());
 			stackPanel.Children.Add(item);
 		}
 
@@ -66,7 +67,7 @@ namespace ProcessesControl.UI.PageMenu
 			String[] names = reg.GetValueNames();
 
 			for (int i = 0; i < names.Length; i++)
-				Add(names[i], reg.GetValue(names[i]));
+				Add(names[i], reg.GetValue(names[i]), reg.GetValueKind(names[i]));
 		}
 
 		// Click top buttons

@@ -26,8 +26,17 @@ namespace ProcessesControl.UI
 			InitializeComponent();
 		}
 
+		public void SetMemory(String memory)
+		{
+			label_memory.Content = memory;
+		}
+
 		public void SetNameProcess(String name)
 		{
+			this.ToolTip = name;
+
+			if (name.Length > 10)
+				name = name.Substring(0, 10) + "...";
 			label_name_process.Content = name;
 		}
 

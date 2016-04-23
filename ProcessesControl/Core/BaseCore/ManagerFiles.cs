@@ -12,9 +12,13 @@ namespace ProcessesControl.Core.BaseCore
 		public const String PATH_DATA = @"Data\";
 		public const String PATH_SETTINGS = PATH_DATA + @"Settings.xml";
 		public const String PATH_CAST = PATH_DATA + @"Cast\";
+		public const String PATH_CAST_FILE = PATH_DATA + @"Cast\CastProcesses.xml";
 		public const String PATH_SIGNATURES = PATH_DATA + @"Signatures\";
+		public const String PATH_SIGNATURES_FILE = PATH_SIGNATURES + "Signatures.xml";
 		public const String PATH_LOCK_PROCESSES = PATH_DATA + @"Lock processes\";
 		public const String PATH_UNLOCK_PROCESSES = PATH_DATA + @"Unlock processes\";
+		public const String PATH_AUTORUN = PATH_DATA + @"Autorun\";
+		public const String PATH_AUTORUN_FILE = PATH_DATA + @"Autorun\autorun_regedit.xml";
 		private ICore core;
 
 		public ManagerFiles(ICore core)
@@ -46,6 +50,20 @@ namespace ProcessesControl.Core.BaseCore
 
 				core.GetResource().SetSettings(setting);
 			}
+			if (!File.Exists(PATH_SIGNATURES_FILE))
+			{
+				List<INFO_SIGNATURE> info_s = new List<INFO_SIGNATURE>();
+
+				core.GetResource().SetSignatures(info_s);
+			}
+			if (!File.Exists(PATH_CAST_FILE))
+			{
+				core.GetResource().GetManagerCast().SetListCast(new List<PCProcess>());
+			}
+			if (!File.Exists(PATH_AUTORUN_FILE))
+			{
+				core.GetResource().GetManagerAutorun().SetListRegedit(new List<ManagerAutorun.FileRegedit>());
+			}
 		}
 
 		public void CheckAllFolder()
@@ -60,6 +78,8 @@ namespace ProcessesControl.Core.BaseCore
 				Directory.CreateDirectory(PATH_UNLOCK_PROCESSES);
 			if (!Directory.Exists(PATH_SIGNATURES))
 				Directory.CreateDirectory(PATH_SIGNATURES);
+			if (!Directory.Exists(PATH_AUTORUN))
+				Directory.CreateDirectory(PATH_AUTORUN);
 		}
 	}
 }

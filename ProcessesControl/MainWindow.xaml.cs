@@ -22,6 +22,7 @@ namespace ProcessesControl
 	{
 		#region variables
 		public Core.ICore core;
+		private System.Timers.Timer timer_update;
 		#endregion
 		#region MainWindow
 		public MainWindow()
@@ -35,6 +36,7 @@ namespace ProcessesControl
 			this.CommandBindings.Add(new CommandBinding(SystemCommands.RestoreWindowCommand, this.OnRestoreWindow, this.OnCanResizeWindow));
 			#endregion
 
+
 			core = new Core.BaseCore.ManagerCore();
 
 			page_autorun.Initialize(core);
@@ -44,6 +46,26 @@ namespace ProcessesControl
 			page_settings.Initialize(core);
 
 			menu.clickItemsMenu += Menu_clickItemsMenu;
+
+			timer_update = new System.Timers.Timer();
+			timer_update.Interval = core.GetResource().GetSettings().interval * 1000;
+			timer_update.Elapsed += Timer_update_Elapsed;
+			timer_update.Start();
+		}
+		#endregion
+		#region update
+		private void Timer_update_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+		{
+			if (!core.GetResource().GetSettings().update_processes)
+				timer_update.Stop();
+
+			page_processes.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Background, new Action(delegate {
+				page_processes.Update();
+			}));
+
+			bottom_panel.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Background, new Action(delegate {
+				bottom_panel.SetAllValues(core.GetProcesses().GetProcesses().Length, core.GetProcesses().GetNewProcesses().Count, 0, 0);
+			}));
 		}
 		#endregion
 		#region Menu click in page
@@ -126,6 +148,11 @@ namespace ProcessesControl
 
 		private void OnCloseWindow(object target, ExecutedRoutedEventArgs e)
 		{
+			page_autorun.Visibility = Visibility.Hidden;
+			page_logs.Visibility = Visibility.Hidden;
+			page_processes.Visibility = Visibility.Hidden;
+			page_regulations.Visibility = Visibility.Hidden;
+			page_settings.Visibility = Visibility.Hidden;
 			SystemCommands.CloseWindow(this);
 		}
 

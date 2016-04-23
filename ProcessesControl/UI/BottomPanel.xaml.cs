@@ -27,6 +27,10 @@ namespace ProcessesControl.UI
 
 		public void SetAllValues(int Processes, int lock_count, int cpu, int ram)
 		{
+			label_CPU.Content = "CPU: " + cpu + "%";
+			label_processes_count.Content = "Процессы: " + Processes;
+			label_processes_new.Content = "Неопознанных: " + lock_count;
+			label_RAM.Content = "RAM: " + ram;
 		}
 	}
 }
