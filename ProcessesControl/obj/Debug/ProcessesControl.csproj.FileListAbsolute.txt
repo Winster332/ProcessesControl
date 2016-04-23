@@ -1,7 +1,6 @@
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\bin\Debug\ProcessesControl.exe.config
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\bin\Debug\ProcessesControl.exe
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\bin\Debug\ProcessesControl.pdb
-c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\ProcessesControl.csprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\MainWindow.g.cs
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\App.g.cs
 c:\users\user\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\ProcessesControl_MarkupCompile.cache
@@ -48,3 +47,6 @@ C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesCo
 C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowStartProcess.g.cs
 C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowCreateFileAutorun.baml
 C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\UI\WindowStartProcess.baml
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\bin\Debug\CorePC.dll
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\bin\Debug\CorePC.pdb
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\ProcessesControl\obj\Debug\ProcessesControl.csprojResolveAssemblyReference.cache

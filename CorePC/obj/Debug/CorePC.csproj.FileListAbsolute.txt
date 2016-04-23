@@ -1,0 +1,4 @@
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\CorePC\bin\Debug\CorePC.dll
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\CorePC\bin\Debug\CorePC.pdb
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\CorePC\obj\Debug\CorePC.dll
+C:\Users\User\documents\visual studio 2015\Projects\ProcessesControl\CorePC\obj\Debug\CorePC.pdb

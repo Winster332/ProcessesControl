@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CorePC">
+      <HintPath>..\CorePC\bin\Debug\CorePC.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,19 +58,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Core\BaseCore\INFO_SIGNATURE.cs" />
-    <Compile Include="Core\BaseCore\ManagerAutorun.cs" />
-    <Compile Include="Core\BaseCore\ManagerCast.cs" />
-    <Compile Include="Core\BaseCore\ManagerCore.cs" />
-    <Compile Include="Core\BaseCore\ManagerFiles.cs" />
-    <Compile Include="Core\BaseCore\ManagerProcesses.cs" />
-    <Compile Include="Core\BaseCore\ManagerResource.cs" />
-    <Compile Include="Core\BaseCore\PCProcess.cs" />
-    <Compile Include="Core\IFiles.cs" />
-    <Compile Include="Core\ICore.cs" />
-    <Compile Include="Core\IProcesses.cs" />
-    <Compile Include="Core\IResourse.cs" />
-    <Compile Include="Core\PCSettings.cs" />
     <Compile Include="Net\ManagerNet.cs" />
     <Compile Include="UI\BottomPanel.xaml.cs">
       <DependentUpon>BottomPanel.xaml</DependentUpon>
