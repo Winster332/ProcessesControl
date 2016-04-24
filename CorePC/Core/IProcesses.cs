@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ProcessesControl.Core
 {
@@ -12,7 +13,7 @@ namespace ProcessesControl.Core
 		/// Возвращает все процессы
 		/// </summary>
 		/// <returns></returns>
-		System.Diagnostics.Process[] GetProcesses();
+		Tuple<Process[], List<BaseCore.PCProcess>> GetProcesses();
 		/// <summary>
 		/// Возвращает коллекцию заблокированных процессов
 		/// </summary>
@@ -36,7 +37,7 @@ namespace ProcessesControl.Core
 		/// Возвращает слепок новых процессов
 		/// </summary>
 		/// <returns></returns>
-		List<System.Diagnostics.Process> UpdateNewProcesses();
+		List<BaseCore.PCProcess> UpdateNewProcesses(System.Diagnostics.Process[] processes);
 
 		List<System.Diagnostics.Process> GetNewProcesses();
 	}

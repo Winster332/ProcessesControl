@@ -40,6 +40,15 @@ namespace ProcessesControl.UI
 			label_name_process.Content = name;
 		}
 
+		public void SetState(Core.BaseCore.StateProcesse state)
+		{
+			switch (state)
+			{
+				case Core.BaseCore.StateProcesse.New: this.label_state.Visibility = Visibility.Visible; break;
+				default: this.label_state.Visibility = Visibility.Hidden; break;
+			}
+		}
+
 		public void SetImage(String path)
 		{
 			BitmapImage bi = new BitmapImage(new Uri(path));

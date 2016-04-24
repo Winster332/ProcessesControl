@@ -4,4 +4,8 @@
     <name>Название</name>
     <TypeSignature>none</TypeSignature>
   </INFO_SIGNATURE>
+  <INFO_SIGNATURE>
+    <name>Calculator</name>
+    <TypeSignature>kill</TypeSignature>
+  </INFO_SIGNATURE>
 </ArrayOfINFO_SIGNATURE>

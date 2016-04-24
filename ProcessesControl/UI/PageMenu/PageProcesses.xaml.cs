@@ -37,11 +37,11 @@ namespace ProcessesControl.UI.PageMenu
 		{
 			if (Visibility == Visibility.Visible)
 			{
-				System.Diagnostics.Process[] procrsses = core.GetProcesses().GetProcesses();
-				stackPanel.Children.Clear();
+		//		System.Diagnostics.Process[] procrsses = core.GetProcesses().GetProcesses();
+		//		stackPanel.Children.Clear();
 
-				for (int i = 0; i < procrsses.Length; i++)
-					Add(procrsses[i]);
+		//		for (int i = 0; i < procrsses.Length; i++)
+		//			Add(procrsses[i]);
 			}
 			else if (Visibility == Visibility.Hidden)
 			{
@@ -55,13 +55,14 @@ namespace ProcessesControl.UI.PageMenu
 		}
 		#endregion
 		#region Add
-		public void Add(System.Diagnostics.Process process)
+		public void Add(Core.BaseCore.PCProcess process)
 		{
 			ItemProcess ip = new ItemProcess();
 			ip.Width = 360;
-			ip.SetNameProcess(process.ProcessName);
+			ip.SetNameProcess(process.name);
 			ip.Height = 30;
-			ip.SetMemory(((process.VirtualMemorySize / 1024) / 1000).ToString());
+			ip.SetState(process.State);
+		//	ip.SetMemory(((process.VirtualMemorySize / 1024) / 1000).ToString());
 		// Нужно доставать иконку из процесса
 		//	ip.SetImage(@"C:\Users\User\Desktop\Screen\post-1120952-1428568681.png"); 
 			stackPanel.Children.Add(ip);
@@ -70,26 +71,26 @@ namespace ProcessesControl.UI.PageMenu
 		#region Update
 		public void Update()
 		{
-			System.Diagnostics.Process[] procrsses = core.GetProcesses().GetProcesses();
-			core.GetProcesses().UpdateNewProcesses();
-
+			Tuple<System.Diagnostics.Process[], List<Core.BaseCore.PCProcess>> tuple_processes = core.GetProcesses().GetProcesses();
+			System.Diagnostics.Process[] procrsses = tuple_processes.Item1;
+			List<Core.BaseCore.PCProcess> core_processes = tuple_processes.Item2;
 			stackPanel.Children.Clear();
 
 			if (this.Visibility == Visibility.Visible)
 			{
-				for (int i = 0; i < procrsses.Length; i++)
-					Add(procrsses[i]);
+				for (int i = 0; i < core_processes.Count; i++)
+					Add(core_processes[i]);
 			}
 		}
 		#endregion
 		#region Button click Update
 		private void Button_Click(object sender, RoutedEventArgs e)
 		{
-			System.Diagnostics.Process[] procrsses = core.GetProcesses().GetProcesses();
-			stackPanel.Children.Clear();
+		//	System.Diagnostics.Process[] procrsses = core.GetProcesses().GetProcesses();
+		//	stackPanel.Children.Clear();
 
-			for (int i = 0; i < procrsses.Length; i++)
-				Add(procrsses[i]);
+		//	for (int i = 0; i < procrsses.Length; i++)
+			//	Add(procrsses[i]);
 		}
 		#endregion
 		#region Create cast

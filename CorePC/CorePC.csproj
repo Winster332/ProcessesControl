@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Core\BaseCore\INFO_SIGNATURE.cs" />
     <Compile Include="Core\BaseCore\ManagerAutorun.cs" />
     <Compile Include="Core\BaseCore\ManagerCast.cs" />

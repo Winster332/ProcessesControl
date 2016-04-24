@@ -13,5 +13,6 @@ namespace ProcessesControl.Core.BaseCore
 		public String name;
 		public String path;
 		public StateProcesse State;
+		public Object[] userDate;
 	}
 }

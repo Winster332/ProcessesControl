@@ -31,23 +31,24 @@ namespace ProcessesControl.UI.PageMenu
 
 		private void PageLogs_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
 		{
-			if (this.Visibility == Visibility.Visible)
-			{
-				this.stackPanel.Children.Clear();
+		//	if (this.Visibility == Visibility.Visible)
+		//	{
+		//		this.stackPanel.Children.Clear();
 
-				List<System.Diagnostics.Process> list_new_processes = core.GetProcesses().UpdateNewProcesses();
+		//		List<Core.BaseCore.PCProcess> list_new_processes = core.GetProcesses().UpdateNewProcesses();
 
-				for (int i = 0; i < list_new_processes.Count; i++)
-					Add(list_new_processes[i]);
+		//		for (int i = 0; i < list_new_processes.Count; i++)
+		//			Add(list_new_processes[i]);
 
-			}
+		//	}
 		}
 		
-		public void Add(System.Diagnostics.Process process)
+		public void Add(Core.BaseCore.PCProcess process)
 		{
 			ItemProcess ip = new ItemProcess();
 			ip.Width = 360;
-			ip.SetNameProcess(process.ProcessName);
+			ip.SetNameProcess(process.name);
+			ip.SetState(process.State);
 			ip.Height = 30;
 			stackPanel.Children.Add(ip);
 		}

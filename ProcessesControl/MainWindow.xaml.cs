@@ -64,7 +64,7 @@ namespace ProcessesControl
 			}));
 
 			bottom_panel.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Background, new Action(delegate {
-				bottom_panel.SetAllValues(core.GetProcesses().GetProcesses().Length, core.GetProcesses().GetNewProcesses().Count, 0, 0);
+			//	bottom_panel.SetAllValues(core.GetProcesses().GetProcesses().Length, core.GetProcesses().GetNewProcesses().Count, 0, 0);
 			}));
 		}
 		#endregion

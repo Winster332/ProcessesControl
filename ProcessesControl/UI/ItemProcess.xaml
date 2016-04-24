@@ -10,11 +10,12 @@
 		<StackPanel>
 			<StackPanel Orientation="Horizontal" Background="#9A9A9A" MouseDown="StackPanel_MouseDown">
 				<Grid Width="325">
-						<Image x:Name="img" Width="40" HorizontalAlignment="Left"/>
-						<Label x:Name="label_name_process" Content="System" FontSize="17" Margin="40, -2, 0, 0" Foreground="#303030"/>
-						<Label x:Name="label_memory" Content="RAM" FontSize="17" Margin="160, -2, 0, 0" Foreground="#303030"/>
-					</Grid>
-					<Button Width="30" HorizontalAlignment="Right" Style="{StaticResource StyleButtonClose}"/>
+					<Image x:Name="img" Width="40" HorizontalAlignment="Left"/>
+					<Label x:Name="label_name_process" Content="System" FontSize="17" Margin="40, -2, 0, 0" Foreground="#303030"/>
+					<Label x:Name="label_memory" Content="RAM" FontSize="17" Margin="160, -2, 0, 0" Foreground="#303030"/>
+					<Label x:Name="label_state" Content="NEW" FontSize="17" FontWeight="Bold"  Margin="270, -2, 0, 0" Foreground="#AA5555"/>
+				</Grid>
+				<Button Width="30" HorizontalAlignment="Right" Style="{StaticResource StyleButtonClose}"/>
 			</StackPanel>
 			<StackPanel Background="#DADADA">
 				<Label Content="Имя: "/>
